@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -63,6 +64,12 @@ public class MainActivity extends AppCompatActivity {
             countNum = findViewById(R.id.countNum) ;
             genNum = findViewById(R.id.genNum) ;
 
+            String count2 = countNum.getText().toString() ;
+            if (count2.equals("")) {
+                Toast.makeText(this,"회차를 입력하세요",Toast.LENGTH_SHORT).show() ;
+                return ;
+            }
+
             lottoVO.setCount(countNum.getText().toString()) ;
             lottoVO.setNumber(genNum.getText().toString()) ;
             LottoDAO.insert(dbHelper , lottoVO) ;
@@ -76,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("수정/삭제")
+                builder.setTitle("삭제")
                         .setNegativeButton("삭제", (dialogInterface, i) -> {
                             LottoDAO.delete(dbHelper , list.get(position).getCount());
                             list.remove(position) ;
@@ -91,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         moveBtn.setOnClickListener( v -> {
-            Intent intent = new Intent(getApplicationContext() , manual.class) ;
+            Intent intent = new Intent(this , manual.class) ;
             startActivity(intent) ;
         });
     }
