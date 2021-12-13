@@ -32,4 +32,10 @@ public class LottoDAO {
         db.insert("lotto" , null , contentValues) ;
         dbHelper.close() ;
     }
+
+    public static void delete(DBHelper dbHelper , String count) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase() ;
+
+        db.delete("lotto" , "count=?" , new String[]{count}) ;
+    }
 }

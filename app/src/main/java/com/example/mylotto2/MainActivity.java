@@ -1,8 +1,12 @@
 package com.example.mylotto2;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -16,7 +20,7 @@ import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button createNum , saveNum ;
+    Button createNum , saveNum , moveBtn ;
     EditText countNum ;
     TextView genNum ;
     ListView listDiary ;
@@ -34,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         createNum = findViewById(R.id.createNum) ;
         saveNum = findViewById(R.id.saveNum) ;
+        moveBtn = findViewById(R.id.moveBtn) ;
         genNum = findViewById(R.id.genNum) ;
         Set<Integer> set = new HashSet<>() ;
 
@@ -61,6 +66,33 @@ public class MainActivity extends AppCompatActivity {
             lottoVO.setCount(countNum.getText().toString()) ;
             lottoVO.setNumber(genNum.getText().toString()) ;
             LottoDAO.insert(dbHelper , lottoVO) ;
+
+            Intent intent = getIntent() ;
+            finish() ;
+            startActivity(intent) ;
+        });
+
+        listDiary.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("수정/삭제")
+                        .setNegativeButton("삭제", (dialogInterface, i) -> {
+                            LottoDAO.delete(dbHelper , list.get(position).getCount());
+                            list.remove(position) ;
+                            Intent intent = getIntent() ;
+                            finish() ;
+                            startActivity(intent) ;
+                            ((Adapter)listDiary.getAdapter()).notifyDataSetChanged() ;
+                        })
+                        .create()
+                        .show();
+            }
+        });
+
+        moveBtn.setOnClickListener( v -> {
+            Intent intent = new Intent(getApplicationContext() , manual.class) ;
+            startActivity(intent) ;
         });
     }
 }

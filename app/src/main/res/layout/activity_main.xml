@@ -18,9 +18,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="#4CAF50"
+            android:backgroundTint="#4CAF50"
+            android:backgroundTintMode="add"
             android:hint="번호생성"
             android:textAlignment="center"
-            android:textColorHint="#FFEB3B"
+            android:textColorHint="#FFC107"
             android:textSize="16sp" />
 
         <EditText
@@ -41,9 +44,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="#4CAF50"
+            android:backgroundTint="#4CAF50"
+            android:backgroundTintMode="add"
             android:hint="번호저장"
             android:textAlignment="center"
-            android:textColorHint="#FFEB3B"
+            android:textColorHint="#FFC107"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -74,6 +80,7 @@
             android:layout_gravity="center"
             android:hint="구매한 번호"
             android:textAlignment="center"
+            android:textColor="#FFC107"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -85,6 +92,25 @@
         <ListView
             android:id="@+id/listDiary"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="350dp">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/moveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4CAF50"
+            android:backgroundTint="#4CAF50"
+            android:backgroundTintMode="add"
+            android:hint="수동구매"
+            android:textColorHint="#FFC107" />
     </LinearLayout>
 </LinearLayout>
