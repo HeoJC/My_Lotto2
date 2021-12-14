@@ -6,20 +6,28 @@
     <TextView
         android:id="@+id/buyCount"
         android:layout_width="149dp"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:layout_weight="1"
-        android:background="#FFC107"
+        android:background="#8BC34A"
+        android:backgroundTint="#8BC34A"
+        android:backgroundTintMode="src_over"
+        android:gravity="center"
         android:hint="회차"
         android:textAlignment="center"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/buyNum"
         android:layout_width="411dp"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:layout_weight="1"
-        android:background="#FFC107"
+        android:background="#8BC34A"
+        android:backgroundTint="#8BC34A"
+        android:backgroundTintMode="src_over"
+        android:gravity="center"
         android:hint="저장한 번호"
         android:textAlignment="center"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="16sp" />
 </LinearLayout>

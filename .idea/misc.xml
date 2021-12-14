@@ -3,11 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/dev/My_Lotto2/app/src/main/res/layout/activity_main.xml" value="0.17857142857142858" />
-        <entry key="..\:/dev/My_Lotto2/app/src/main/res/layout/manual.xml" value="0.33" />
         <entry key="..\:/dev/androidwork/MyLotto2/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/dev/androidwork/MyLotto2/app/src/main/res/layout/lietview_item.xml" value="0.25" />
-        <entry key="..\:/dev/androidwork/MyLotto2/app/src/main/res/layout/manual.xml" value="0.36614583333333334" />
+        <entry key="..\:/dev/androidwork/MyLotto2/app/src/main/res/layout/manual.xml" value="0.33" />
+        <entry key="..\:/dev/androidwork/MyLotto2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
       </map>
     </option>
   </component>

@@ -18,12 +18,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:background="#4CAF50"
-            android:backgroundTint="#4CAF50"
-            android:backgroundTintMode="add"
+            android:background="#8BC34A"
+            android:backgroundTint="#8BC34A"
+            android:backgroundTintMode="src_over"
             android:hint="번호생성"
             android:textAlignment="center"
-            android:textColorHint="#FFC107"
+            android:textColorHint="#000000"
             android:textSize="16sp" />
 
         <EditText
@@ -44,28 +44,96 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:background="#4CAF50"
-            android:backgroundTint="#4CAF50"
-            android:backgroundTintMode="add"
+            android:background="#8BC34A"
+            android:backgroundTint="#8BC34A"
+            android:backgroundTintMode="src_over"
             android:hint="번호저장"
             android:textAlignment="center"
-            android:textColorHint="#FFC107"
+            android:textColorHint="#000000"
             android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/genNum1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="생"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/genNum2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="성"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/genNum3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="번"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/genNum4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="호"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/genNum5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="출"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/genNum6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="력"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/genNum"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_gravity="center"
+            android:gravity="center"
             android:hint="생성된 번호"
             android:textAlignment="center"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:visibility="gone" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -92,7 +160,7 @@
         <ListView
             android:id="@+id/listDiary"
             android:layout_width="match_parent"
-            android:layout_height="350dp">
+            android:layout_height="330dp">
 
         </ListView>
 
@@ -107,10 +175,10 @@
             android:id="@+id/moveBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#4CAF50"
-            android:backgroundTint="#4CAF50"
-            android:backgroundTintMode="add"
-            android:hint="수동구매"
-            android:textColorHint="#FFC107" />
+            android:background="#8BC34A"
+            android:backgroundTint="#8BC34A"
+            android:backgroundTintMode="src_over"
+            android:hint="회차별 당첨번호조회"
+            android:textColorHint="#000000" />
     </LinearLayout>
 </LinearLayout>
